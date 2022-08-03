@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 0.9375rem;
+  font-family: "Alata", sans-serif;
+  color: hsl(0deg, 0%, 0%);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.container {
+  width: 90rem;
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+}
+@media (max-width: 87.4375em) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 63.9375em) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 39.9375em) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 40em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.header {
+  background: url("/images/desktop/image-hero.jpg");
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  background-position: left;
+}
+@media (max-width: 39.9375em) {
+  .header {
+    background: url("/images/mobile/image-hero.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.header .nav {
+  padding-top: 3.5rem;
+  margin-bottom: 6.875rem;
+}
+.header .nav .logo {
+  width: 12.5rem;
+}
+@media (max-width: 39.9375em) {
+  .header .nav .logo {
+    width: 9.375rem;
+  }
+}
+.header .nav .logo img {
+  width: 100%;
+}
+.header .nav .ham-menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: hsl(0deg, 0%, 100%);
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+.header .nav .ham-menu > span:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+.header .nav .nav-links {
+  gap: 2rem;
+  position: relative;
+}
+.header .nav .nav-links a {
+  color: hsl(0deg, 0%, 100%);
+}
+.header .nav .nav-links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid red;
+  height: 7px;
+  width: 4px;
+  background: hsl(0deg, 0%, 100%);
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+.header .nav .nav-links a:hover::before {
+  opacity: 1;
+}
+.header .mobile-menu {
+  position: absolute;
+  width: 100%;
+  background-color: hsl(0deg, 0%, 0%);
+  padding: 1.625rem;
+  z-index: 10000;
+}
+.header .mobile-menu a {
+  display: block;
+  padding: 0.625rem;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+}
+.header .hero-text {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  width: 400px;
+  margin-inline: auto;
+}
+@media (min-width: 40em) {
+  .header .hero-text {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 39.9375em) {
+  .header .hero-text {
+    width: 90%;
+  }
+}
+.header .hero-text h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  padding: 1.25rem;
+  color: hsl(0deg, 0%, 100%);
+}
+@media (max-width: 39.9375em) {
+  .header .hero-text h1 {
+    font-size: 2.3rem;
+  }
+}/*# sourceMappingURL=style.css.map */

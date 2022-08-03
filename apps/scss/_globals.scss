@@ -1,0 +1,89 @@
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $bodyfont;
+    font-family: 'Alata', sans-serif;
+    color: $black;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-col {
+        flex-direction: column;
+    }
+}
+
+.container {
+    width: 90rem;
+    margin: 0 auto;
+    padding-inline: 1.25rem;
+
+    @include breakpoint-down(large){
+        width: 100%;
+    }
+
+    @include breakpoint-down(medium){
+        width: 100%;
+    }
+
+    @include breakpoint-down(small){
+        width: 100%;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(medium){
+        display: none;
+    }
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(small){
+        display: none;
+    }
+}
+
+.hide {
+    display: none;
+}
+
