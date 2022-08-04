@@ -1,34 +1,25 @@
 .header {
-    background: url('/images/desktop/image-hero.jpg');
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: relative;
-    background-position: left;
 
+    height: 70vh;
+
+    @include breakpoint-up(medium){
+        background: url('/images/desktop/image-hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-position: center center;
+    }
     @include breakpoint-down(small){
         background: url('/images/mobile/image-hero.jpg');
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
     .nav {
-
         padding-top: 3.5rem;
         margin-bottom: 6.875rem;
 
-        .logo {
-            width: 12.5rem;
-
-            @include breakpoint-down(small){
-                width: 9.375rem;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
 
         .ham-menu{//mobile menu
             > span {
@@ -46,36 +37,7 @@
     
     
         }
-        .nav-links {
-            gap: 2rem;
-            position: relative;
-            
-            a {
-                color: $white; 
 
-                &::before {
-                content: "";
-                display: block;
-                position: absolute;
-                border: 2px solid red;
-                height: 7px;
-                width: 4px;
-                background:$white;
-                left: 0;
-                right: 0;
-                bottom: -30px;
-                opacity: 0;
-                transition: opacity 300ms ease-in-out;
-            }
-
-            &:hover {
-
-                &::before{
-                    opacity: 1;
-                }
-            }           
-            }
-        }
     }
 
     .mobile-menu {//hamburger-clicked
@@ -83,6 +45,7 @@
         width: 100%;
         background-color: $black;
         padding: 1.625rem;
+        height: 100vh;
         z-index: 10000;
 
         a {
@@ -97,19 +60,14 @@
 
     .hero-text {
 
-        border: 1px solid $white;
-        width: 400px;
-        margin-inline: auto;
 
-        @include breakpoint-up(medium){
-            margin-left: 0px;
-        }
 
-        @include breakpoint-down(small){
-            width: 90%;
-            
-        }
+
+
         h1 {
+            border: 1px solid $white;
+            
+            width: 500px;
             text-transform: uppercase; 
             font-size: 3rem; 
             font-weight: 300;
@@ -118,8 +76,10 @@
             color: $white;
 
             @include breakpoint-down(small){
-                font-size: 2.3rem;
+                width: 100%;
+                font-size: 2.6rem;
             }
+
         }
     }
 }

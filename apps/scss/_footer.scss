@@ -1,0 +1,34 @@
+.footer {
+    background-color: $black;
+    padding: 3.625rem 0;
+
+    @include breakpoint-up(medium){
+        padding: 2.1rem 0;
+    }
+
+    .mobile-footer {
+
+        .mobile-footer-links {
+            margin: 2rem 0;
+            gap: 1rem;
+            text-align: center;
+
+            a {
+                font-size: $bodyfont;
+                color: $white;
+            }
+        }
+
+
+
+        .copy {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .desktop-footer {
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}

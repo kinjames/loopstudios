@@ -1,0 +1,30 @@
+.mobile-grid {
+    margin-bottom: 6.75rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+    } 
+
+    .images-mob {
+        gap: 1.25rem;
+        .img-text {
+
+            h3 {
+                top: 50%;
+                left: 5%;
+            }
+        }
+
+    }
+
+    .btn {
+        margin-top: 1.75rem;
+        width: 50%;
+        margin-inline: auto;
+    }
+
+}

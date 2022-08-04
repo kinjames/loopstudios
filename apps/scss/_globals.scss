@@ -33,6 +33,30 @@ p {
     line-height: 1.5;
 }
 
+section {
+    padding-top: 9.375rem;
+
+    @include breakpoint-down(small){
+        padding-top: 7.25rem;
+    }
+}
+
+.logo {
+    width: 12.5rem;
+
+    @include breakpoint-down(small){
+        width: 9.375rem;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.copy {
+    color: $darkGray;
+}
+
 .flex {
     display: flex;
 
@@ -51,10 +75,16 @@ p {
     &-col {
         flex-direction: column;
     }
+    &-col-mob {
+        @include breakpoint-down(small){
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+    }
 }
 
 .container {
-    width: 90rem;
+    width: 71.25rem;
     margin: 0 auto;
     padding-inline: 1.25rem;
 
@@ -83,7 +113,112 @@ p {
     }
 }
 
+.icons {
+    gap: 1rem;
+    margin-bottom: 1rem;
+    a {
+        font-size: 1.2rem;
+        color: $white;
+        text-align: center;
+    }
+
+    
+}
+
+.nav-links, .icons {
+    gap: 2rem;
+
+    
+    a {
+        color: $white; 
+        position: relative;
+
+        &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0.1875rem;
+        width: 1.5625rem;
+        background:$white;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    &:hover {
+
+        &::before{
+            opacity: 1;
+        }
+    }           
+    }
+}
+
+.cta {
+    letter-spacing: 3px;
+    color: $veryDarkGray;
+    text-align: center;
+    border: 1px solid $veryDarkGray;
+    padding: 0.5rem;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.general {
+    position: relative;
+    color: rgba(255, 255, 255,1);
+
+    img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    h3 {
+        position: absolute;
+        z-index: 2000;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+
+//js classes
+
 .hide {
     display: none;
 }
 
+
+.noscroll {
+    overflow: hidden;
+    background: $black;
+    z-index: 1000;
+}
+
+
+.active {
+    display: block;
+}
+
+.burger {
+
+    > span:first-child{
+        transform: rotate(45deg);
+    }
+    
+    > span:nth-child(2){
+        opacity: 0;
+    }
+    
+    > span:last-child{
+        transform: rotate(-45deg);
+    }
+
+}
