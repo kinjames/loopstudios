@@ -49,6 +49,7 @@ section {
 @media (max-width: 39.9375em) {
   .logo {
     width: 9.375rem;
+    z-index: 20000;
   }
 }
 .logo img {
@@ -192,6 +193,10 @@ section {
   display: block;
 }
 
+.burger {
+  z-index: 20000;
+}
+
 .burger > span:first-child {
   transform: rotate(45deg);
 }
@@ -203,7 +208,7 @@ section {
 }
 
 .header {
-  height: 65vh;
+  height: 70vh;
 }
 @media (min-width: 40em) {
   .header {
@@ -233,6 +238,7 @@ section {
   background-color: hsl(0deg, 0%, 100%);
   transition: all 300ms ease-in-out;
   transform-origin: 3px 1px;
+  z-index: 20000;
 }
 .header .nav .ham-menu > span:not(:last-child) {
   margin-bottom: 0.3125rem;
@@ -243,6 +249,8 @@ section {
   background-color: hsl(0deg, 0%, 0%);
   padding: 1.625rem;
   height: 100vh;
+  top: 0;
+  padding-top: 200px;
   z-index: 10000;
 }
 .header .mobile-menu a {
