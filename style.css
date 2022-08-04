@@ -203,7 +203,7 @@ section {
 }
 
 .header {
-  height: 70vh;
+  height: 65vh;
 }
 @media (min-width: 40em) {
   .header {
